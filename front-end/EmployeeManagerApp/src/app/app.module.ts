@@ -1,10 +1,9 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+
 import { AppComponent } from './app.component';
+import { EmployeeService } from './employee.service';
+import { HttpClientModule } from '@angular/common/http';import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,11 +11,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule  
+    HttpClientModule, FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
